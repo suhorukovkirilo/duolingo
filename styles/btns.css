@@ -1,0 +1,270 @@
+
+.register {
+    display: flex;
+    background: none;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 0 4px;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    padding: 0 16px;
+    align-items: center;
+    font: 700 15px / 1.2 din-round, sans-serif;
+    justify-content: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.register::before {
+    content: "";
+    background-color: rgb(88, 204, 2);
+    border-radius: 16px;
+    bottom: 0;
+    box-shadow: 0 4px 0;
+    color: rgb(88, 167, 0);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.register:active {
+    color: rgb(255, 255, 255);
+    transform: translateY(4px) translateZ(0);
+}
+
+.register:active::before {
+    box-shadow: none;
+}
+
+.login {
+    display: flex;
+    background: none;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 2px 2px 4px;
+    color: rgb(28, 176, 246);
+    height: 50px;
+    padding: 0 16px;
+    align-items: center;
+    font: 700 15px / 1.2 din-round, sans-serif;
+    justify-content: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transform: translateZ(0);
+}
+
+.login::before {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 16px;
+    bottom: -2px;
+    box-shadow: 0 2px 0;
+    color: rgb(229, 229, 229);
+    content: "";
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    z-index: -1;
+}
+
+.login:active {
+    transform: translateY(2px) translateZ(0);
+}
+
+.login:active::before {
+    box-shadow: none;
+}
+
+.send-login {
+    display: flex;
+    background: none;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0px 0px 4px;
+    color: rgb(28, 176, 246);
+    height: 50px;
+    padding: 0 16px;
+    align-items: center;
+    font: 700 15px / 1.2 din-round, sans-serif;
+    justify-content: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transform: translateZ(0);
+    margin-top: 20px;
+    width: 100%
+}
+
+.send-login::before {
+    background-color: rgb(28, 176, 246);
+    border-radius: 16px;
+    bottom: -2px;
+    box-shadow: 0 4px 0;
+    color: rgb(24, 153, 214);
+    content: "";
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    z-index: -1;
+}
+
+.send-login:active {
+    transform: translateY(4px) translateZ(0);
+}
+
+.send-login:active::before {
+    box-shadow: none;
+}
+
+.install-btn {
+    background: none;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 2px 2px 4px;
+    color: rgb(75, 75, 75);
+    height: auto;
+    padding: 9.5px 14px;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    transform: translateZ(0);
+    grid-gap: 10px;
+}
+
+.install-btn::before {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 16px;
+    bottom: -2px;
+    box-shadow: 0 2px 0;
+    color: rgb(229, 229, 229);
+    content: "";
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    z-index: -1;
+}
+
+.install-btn:active {
+    color: rgb(75, 75, 75);
+    transform: translateY(2px) translateZ(0);
+}
+
+.install-btn:active::before {
+    box-shadow: none;
+}
+
+.try-trial {
+    background: none;
+    border-color: transparent;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 0 0 4px;
+    color: rgb(0, 4, 55);
+    height: 50px;
+    padding: 0 16px;
+    align-items: center;
+    font: 700 15px / 1.2 din-round, sans-serif;
+    justify-content: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    transform: translateZ(0);
+}
+
+.try-trial::before {
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    bottom: 0;
+    box-shadow: 0 4px 0;
+    color: rgba(255, 255, 255, 0.5);
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.try-trial:active {
+    color: rgb(0, 4, 55);
+    transform: translateY(4px) translateZ(0);
+}
+
+.try-trial:active::before {
+    box-shadow: none;
+}
+
+.duolingo-survey-answer-btn {
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 2px 2px 4px;
+    cursor: pointer;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.duolingo-survey-answer-btn::before {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 16px;
+    bottom: -2px;
+    box-shadow: 0 2px 0 rgb(229, 229, 229);
+    content: "";
+    left: -2px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    z-index: -1;
+}
+
+.duolingo-survey-answer-btn:active {
+    transform: translateY(2px) translateZ(0);
+}
+
+.duolingo-survey-answer-btn:active::before {
+    transform: translateY(2px) translateZ(0);
+    background-color: #ddf4ff;
+    border-color: #84d8ff;
+    box-shadow: none;
+}
+
+.duolingo-survey-answer-btn-active:before {
+    background-color: #ddf4ff;
+    border-color: #84d8ff;
+    box-shadow: 0 2px 0 #84d8ff;
+}
+
+.btn-disabled, .btn-disabled::before, .btn-disabled:active {
+    background-color: #e5e5e5;
+    color: #afb1b6;
+    border-radius: 16px;
+}
+
+.btn-next {
+    padding: 0 44px;
+    width: 100%;
+}
+@media (orientation: landscape) {
+    .btn-next {
+        width: auto;
+    }
+}
