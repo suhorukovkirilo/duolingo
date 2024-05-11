@@ -1,0 +1,76 @@
+@keyframes hide-nav {
+    0% {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(-70px);
+        visibility: visible;
+    }
+}
+
+@keyframes show-nav {
+    0% {
+        transform: translateY(-70px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {width: 0};
+    to {width: 100%};
+}
+
+@keyframes img-load {
+    0% {
+        transform: scale(0.01);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-15px);
+    }
+
+    40% {
+        transform: translateX(15px);
+    }
+
+    60% {
+        transform: translateX(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bg-repaint {
+    0% {
+        background-color: #ffffff;
+    }
+
+    100% {
+        background-color: #ddf4ff;
+    }
+}

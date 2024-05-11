@@ -1,0 +1,104 @@
+.language-choose-dialog {
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+}
+@media (max-width:1065px) {
+    .language-choose-dialog {
+        overflow: hidden;
+        padding: 40px 10px !important;
+    }
+    
+}
+
+.language-choose-wrap-1 {
+    align-items: center;
+    display: flex;
+    margin: 12px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+@media (max-width:1065px) {
+    .language-choose-wrap-1 {
+    flex-direction: column;
+    padding: 24px 12px;
+    width: 100%}
+}
+
+.language-choose-wrap-2 {
+    margin-top: 50px;
+    max-width: 932px;
+    padding: 0 40px;
+    width: 100vw;
+}
+@media (max-width:1065px) {
+    .language-choose-wrap-2 {
+    padding: 0 24px;
+    width: 100%}
+}@media (max-width:530px) {
+    .language-choose-wrap-2 {
+    padding: 0;
+    width: 100%}
+}
+
+.language-for-choose-set {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    justify-content: center;
+    margin: auto;
+    padding: 24px 0 36px;
+}
+
+.language-for-choose {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(229, 229, 229);
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 2px 2px 4px;
+    cursor: pointer;
+    display: inline-block;
+    flex: 1 1 auto;
+    margin: 12px;
+    max-width: 240px;
+    min-height: 217px;
+    min-width: 200px;
+    padding: 12px 12px 24px;
+    text-align: center;
+}
+
+.language-for-choose:hover {
+    filter: brightness(0.9);
+}
+
+.language-for-choose:active {
+    transform: translateY(2px) translateZ(0);
+}
+
+.language-img {
+    height: 71px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.language-title {
+    color: rgb(75, 75, 75);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.language-students {
+    color: rgb(119, 119, 119);
+    font-weight: 500;
+    margin-top: 6px;
+    text-transform: none;
+}
