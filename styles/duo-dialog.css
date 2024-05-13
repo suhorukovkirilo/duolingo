@@ -1,3 +1,5 @@
+/* Файл налаштувань стилів діалогу з Duolingo */
+
 .duolingo-dialog {
     height: 100%;
     left: 0;
@@ -85,6 +87,7 @@
     padding: 20px 16px;
     width: 100%;
 }
+
 @media (min-width: 700px) {
     .duolingo-dialogue-wrap {
         bottom: 98px;
