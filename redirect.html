@@ -1,0 +1,56 @@
+<html lang="uk">
+<head>
+    <!--Налащтування для браузеру-->
+    <link rel="icon" href="ico/duolingo.ico">
+    <title>Переадрусування</title>
+
+    <!--Підключення стилів-->
+    <link href="styles/duo-dialog.css" rel="stylesheet">
+    <link href="styles/duolingo.css" rel="stylesheet">
+
+    <!--Підключення js анімацій-->
+    <script src="script/anime.js"></script>
+</head>
+<body>
+    <main>
+        <div class="duolingo-dialogue-wrap">
+            <div class="duolingo-dialogue">
+                <div class="duolingo-message-wrap">
+                    <div class="duolingo-message">
+                        <img class="duolingo-message-corner" src="svg/message-box-corner.svg">
+                        <div style="position: relative;">
+                            <div>...</div> <!--Текст про переадресування-->
+                        </div>
+                    </div>
+                </div>
+                <!--Duo зображення, який щось шукає (детектив)-->
+                <span class="duolingo-dialogue-img">
+                    <img height="200px" style="margin-top: 225px; margin-left: 100px;" src="svg/duo-detective.svg">
+                </span>
+            </div>
+        </div>
+        <!--Місце для дії, але дій нема, бо йде автоматичне переадресування-->
+        <div class="duolingo-dialogue-act">
+            <div class="duolingo-dialogue-footer">
+                <div class="duolingo-dialogue-act-wrap"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        setTimeout(function() {
+            // Отримання адреси для переадресування
+            var url = location.href.split("?url=");
+            url = url[url.length - 1];
+            // Задання анімації
+            var message = document.querySelector(".duolingo-message div div");
+            typing(message, "Ваше посилання розташоване на іншому вебсайті. Йде переадресація...", function() {
+                setTimeout(function() {
+                    location.href = url;
+                }, Math.random() * 2000 ); // Переадресування через деякий час
+            })
+        }, 400)
+    </script>
+
+</body>
+</html>    
