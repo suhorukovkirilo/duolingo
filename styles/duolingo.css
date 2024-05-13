@@ -1,0 +1,787 @@
+/* Файл основних стилів */
+
+/* Стилі кожного елементу */
+* {
+    box-sizing: inherit;
+    font-family: din-round, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    /* Настпуні параметри прибирають можливість копіювання з сторінки */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* Прибирання горизонатльної прокрутки */
+}
+
+/* Стилі для основних тегів */
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+img {
+    border-style: none;
+}
+
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 70px;
+    min-height: calc(100vh - 105.5px);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+footer {
+    background-color: rgb(88, 204, 2);
+    margin-top: -90px;
+}
+
+footer a {
+    color: rgb(165, 237, 110);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: -2.5vw;
+}
+
+footer hr {
+    border-top: 3px solid rgb(165, 237, 110);
+    margin: 0;
+    margin-top: 90px;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+/* Клас, що ховає прокрутку для елементу */
+.hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Клас початкової анміації картинок та кнопок */
+.anime-img {
+    animation: img-load 1.5s ease-out 0.1s;
+}
+
+/* Задання стилів для верхньої навігації */
+.header-nav {
+    background: rgb(255, 255, 255);
+    border-bottom: 2px solid transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-nav nav {
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.duolingo-logo {
+    height: 42px;
+    width: 179px;
+}
+
+.language {
+    cursor: pointer;
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+    transform: translateZ(0);
+    color: rgb(175, 175, 175);
+    align-items: center;
+    display: none;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.language-list-open {
+    height: 14px;
+    margin-left: 8px;
+    width: 14px;
+}
+
+/* Задання стилів для основної частини header'а */
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px 15px 20px;
+}
+
+.main-picture {
+    align-items: end;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+}
+
+.main-picture div {
+    margin-left: 273px; margin-top: 273px
+}
+
+.main-pic {
+    aspect-ratio: 1/1;
+    max-width: 273px;
+    width: 100%;
+}
+
+.main-content {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.main-content h1 {
+    color: rgb(75, 75, 75);
+    flex: 1;
+    font-size: 32px;
+    line-height: normal;
+    margin: 10px 0 0;
+    max-width: 345px;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.register-or-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    max-width: 330px;
+    width: 100%
+}
+
+/* Задання стилів для вибору мови, що буде вивчатися */
+
+.header-lang {
+    align-items: center;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    border-top: 2px solid rgb(229, 229, 229);
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.header-lang nav {
+    grid-gap: 30px 22px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    height: 74px;
+    max-width: 1036px;
+    width: 100%;
+}
+
+.lang-scroll {
+    color: rgb(175, 175, 175);
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+.lang-current {
+    display: flex;
+}
+
+.lang-current-link {
+    align-items: center;
+    color: rgb(119, 119, 119);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.lang-current-name {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+/* Стилі для блоків про інформація */
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    padding: 96px 0;
+}
+
+/* Блоки про інформацію */
+.info-section-1, .info-section-2, .info-section-3, .info-section-4 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 15px;
+}
+
+.info-section-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.info-section-title {
+    color: rgb(88, 204, 2);
+    font-family: feather, sans-serif;
+    font-size: 36px;
+    line-height: normal;
+    margin: 0;
+    max-width: 340px;
+}
+
+.info-section-p {
+    color: rgb(119, 119, 119);
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 330px;
+}
+
+/* Виділене слово 'еффективність' у інформації */
+.efficacy {
+    color: rgb(28, 176, 246);
+    font-weight: 700;
+}
+
+.info-section-img {
+    aspect-ratio: 1/1;
+    line-height: 0;
+    max-width: 345px;
+    position: relative;
+    width: 100%
+}
+
+/* Стилі для блоку встановлення додатку */
+.install-app {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.install-app-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1728px;
+    padding: 96px 15px 0;
+    width: 100%
+}
+
+.install-app-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 1;
+}
+
+.install-app-title {
+    color: rgb(4, 44, 96);
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: normal;
+    margin: 0;
+    max-width: 330px;
+    text-align: center;
+}
+
+.install-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 330px;
+}
+
+.store-logo {
+    display: inline-block;
+    align-self: start;
+    height: 34px;
+    width: 34px;
+}
+
+.store-logo-google {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.store-install-text {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 1.4;
+}
+
+.store-install-text>span {
+    display: grid;
+}
+
+.install-app-bg {
+    display: grid;
+    margin-left: -120px;
+    margin-top: -90px;
+    position: relative;
+}
+
+.install-app-bg-part {
+    aspect-ratio: 4100/2300;
+    grid-column: 1;
+    grid-row: 1;
+    line-height: 0;
+    pointer-events: none;
+    width: 1200px;
+}
+
+/* Стилі для блоку Duolingo Super */
+.duolingo-super {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 48px 15px 96px;
+}
+
+.duolingo-super-img {
+    aspect-ratio: 1/1;
+    line-height: 0;
+    max-width: 345px;
+    position: relative;
+    width: 100%
+}
+
+.duolingo-super-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 100%
+}
+
+.duolingo-super-text-img {
+    height: auto;
+    max-width: 100%;
+    width: 339px;
+}
+
+/* Стилі останього блоку перед нижньої частиною сайту(footer), де можна почати реєстрацію */
+.final-start {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%
+}
+
+.final-start-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 100%;
+    padding: 40px 15px 0;
+} 
+
+.final-start-content-title {
+    color: rgb(88, 204, 2);
+    font-family: feather, sans-serif;
+    font-size: 36px;
+    letter-spacing: -.02em;
+    line-height: normal;
+    margin: 0;
+    max-width: 330px;
+    text-align: center;
+}
+
+.final-start-image {
+    aspect-ratio: 1448/708;
+    display: flex;
+    min-width: 696px;
+    pointer-events: none;
+    position: relative;
+    width: 100%
+}
+
+.final-start-image span {
+    bottom: 0;
+    margin-top: -17%;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.last-register {
+    max-width: 330px;
+    min-width: 0;
+    width: 100%
+}
+
+/* Стилі для блоків всередині footer */
+.footer-column-set {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: minmax(0, 216px);
+    margin: 0 auto;
+    max-width: 375px;
+    padding: 96px 32px 64px;
+}
+
+.footer-column {
+    align-content: start;
+    display: grid;
+    gap: 32px;
+    transform: translateY(90px);
+}
+
+.footer-column h1 {
+    color: rgb(215, 255, 184);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.footer-languages {
+    margin: 0 auto;
+    max-width: 375px;
+    padding: 40px 32px 64px;
+}
+
+.footer-languages h1 {
+    color: rgb(215, 255, 184);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+
+.footer-languages ul {
+    display: inline-block;
+    margin: -8px -12px;
+}
+
+.footer-languages li {
+    display: inline-block; 
+    margin: 8px 12px
+}
+
+.footer-languages a {
+    color: rgb(165, 237, 110);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+/* Зміна стилів за розміром екрану (адаптивність) */
+
+/* Стилі задаються якщо довжина екрану не менше ніж 760 пікселів */
+@media screen and (min-width:760px) {
+    .header-nav nav {
+        padding: 0 40px;
+    }
+
+    .header-main {
+        justify-content: center;
+        padding: 16px 40px 48px;
+    }
+
+    .main-picture {
+        flex: initial;
+    }
+
+    .main-pic {
+        align-self: auto;
+        max-width: none;
+        width: 424px;
+    }
+
+    .main-content h1 {
+        flex: initial;
+        margin: 16px 0 0;
+        max-width: 480px;
+    }
+
+    .register-or-login {
+        margin-top: 40px;
+    }
+
+    .header-lang {
+        display: none;
+    }
+
+    .info-section-1, .info-section-2, .info-section-3, .info-section-4 {
+        padding: 0;
+    }
+
+    .info-section-title {
+        font-size: 48px;
+        max-width: 503px;
+    }
+
+    .info-section-p {
+        max-width: 473px;
+    }
+
+    .info-section-img {
+        max-width: none;
+        width: 452px;
+    }
+
+    .install-app-container {
+        padding: 140px 0 0;
+    }
+
+    .install-app-info {
+        gap: 48px;
+    }
+
+    .install-app-title {
+        font-size: 48px;
+        max-width: 583px;
+    }
+
+    .install-btns {
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+        max-width: none;
+    }
+
+    .install-app-bg {
+        margin-left: -180px;
+        margin-top: -200px;
+    }
+
+    .install-app-bg-part {
+        width: 1600px;
+    }
+
+    .duolingo-super {
+        gap: 40px;
+        padding: 64px 0 152px;
+    }
+
+    .duolingo-super-img {
+        max-width: none;
+        width: 452px;
+    }
+
+    .duolingo-super-text-img {
+        max-width: none;
+        width: 605px;
+    }
+
+    .final-start-content {
+        margin-bottom: -8.8%;
+        padding: 40px 0 0;
+    }
+
+    .final-start-content-title {
+        font-size: 48px;
+        max-width: 485px;
+    }
+
+    .footer-column-set {
+        grid-template-columns: repeat(3, 216px);
+        max-width: 768px;
+        padding: 64px 40px;
+    }
+
+    .footer-languages {
+        max-width: 768px;
+        padding: 40px 40px 64px;
+    }
+}
+
+/* Стилі задаються якщо довжина екрану не менше ніж 1080 пікселів */
+@media screen and (min-width:1080px) {
+    .header-nav nav {
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 988px;
+        padding: 0;
+    }
+
+    .language {
+        display: flex;
+    }
+
+    .header-main {
+        align-items: center;
+        flex-direction: row;
+        gap: 80px;
+        justify-content: end;
+        margin: 0 auto;
+        padding: 48px 0;
+        width: 988px;
+    }
+
+    .main-picture {
+        margin-right: -65px;
+    }
+
+    .main-picture div {
+        margin-left: 424px; 
+        margin-top: 424px
+    }
+
+    .main-content h1 {
+        margin: 0;
+        width: 480px;
+    }
+
+    .info-section-1, .info-section-2, .info-section-3, .info-section-4 {
+        gap: 101px;
+        margin: 0 auto;
+        width: 988px;
+    }
+
+    .info-section-1, .info-section-3 {
+        flex-direction: row;
+    }
+    .info-section-2, .info-section-4 {
+        flex-direction: row-reverse;
+    }
+
+    .info-section-text {
+        align-items: start;
+        flex-shrink: 0;
+        text-align: initial;
+    }
+
+    .info-section-img {
+        flex-shrink: 0;
+        width: 530px;
+    }
+
+    .info-section-img {
+        flex-shrink: 0;
+        width: 530px;
+    }
+
+    .install-app-container {
+        padding: 140px 0 96px;
+    }
+
+    .install-app-title {
+        font-size: 64px;
+    }
+
+    .install-app-bg {
+        margin-left: -220px;
+        margin-top: -340px;
+    }
+
+    .install-app-bg-part {
+        width: 2000px;
+    }
+
+    .duolingo-super {
+        flex-direction: row;
+        gap: 40px;
+        justify-content: end;
+        margin: 0 auto;
+        padding: 185px 0;
+        width: 988px;
+    }
+
+    .duolingo-super-img {
+        flex-shrink: 0;
+        width: 530px;
+    }
+
+    .duolingo-super-text-img {
+        max-width: 100%
+    }
+
+    .final-start-content {
+        margin-bottom: -10.4%
+    }
+
+    .final-start-content-title {
+        font-size: 64px;
+        max-width: 583px;
+    }
+
+    .footer-column-set {
+        gap: 24px;
+        grid-template-columns: repeat(5, 178px);
+        max-width: 988px;
+        padding: 96px 0 64px;
+    }
+
+    .footer-languages {
+        max-width: 988px;
+        padding: 40px 0 64px;
+    }
+}
+
+/* Стилі задаються якщо довжина екрану менше ніж 1080 пікселів */
+@media screen and not (min-width:1080px) {
+    .register-top {
+        margin-left: 40vw
+    }
+}
+
+/* Стилі задаються якщо довжина екрану не менше ніж 1440 пікселів */
+@media screen and (min-width:1440px) {
+    .duolingo-super {
+        justify-content: center;
+        width: auto;
+    }
+}
