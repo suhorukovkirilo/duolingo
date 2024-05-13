@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
+    <!--Налащтування для браузеру-->
     <link rel="icon" href="ico/duolingo.ico">
     <title>Duolingo - Найкращий помічник у виченні мови</title>
 
-    <link href="duolingo.css" rel="stylesheet">
+    <!--Підключення стилів-->
+    <link href="styles/duolingo.css" rel="stylesheet">
     <link href="styles/duo-dialog.css" rel="stylesheet">
     <link href="styles/duo-survey.css" rel="stylesheet">
     <link href="styles/btns.css" rel="stylesheet">
@@ -12,78 +15,102 @@
     <link href="styles/login.css" rel="stylesheet">
     <link href="styles/mini-game.css" rel="stylesheet">
 
-    <script src="duolingo.js" defer></script>
-    <script src="script.js" defer></script>
+    <!--Підключення скриптів (порядок підключення має значення!)-->
+    <script src="script/anime.js"></script>
+    <script src="script/login.js" defer></script>
+    <script src="script/survey.js" defer></script>
+    <script src="script/mini-game.js" defer></script>
+    <script src="script/duolingo.js" defer></script>
 </head>
-<body ondragstart="return false;">
+<body ondragstart="return false;" style="visibility: hidden;">
+    <!--Початкова(верхня) сторінка сайту-->
     <header>
+        <!--Навігація по сайту-->
         <div class="header-nav">
             <nav>
-                <a href="">
-                    <img alt="duolingo-logo" class="duolingo-logo anime-img" src="svg/logo.svg">
+                <!--Логотип Duolingo-->
+                <a style="cursor: pointer;">
+                    <img class="duolingo-logo anime-img" src="svg/logo.svg">
                 </a>
+                <!--Кнопка зміни мова сайту (недоступна, оскільки скопіювано тільки україномовну версію сайту)-->
                 <button class="language" id="header-change-language">
                     <span>Мова сайту: Українська</span>
-                    <img alt="" class="language-list-open" src="svg/language-list-open.svg">
+                    <img class="language-list-open" src="svg/language-list-open.svg">
                 </button>
             </nav>
         </div>
+        <!--Основний контент header'у сайта-->
         <div class="header-main">
+            <!--Основне зображення сайту-->
             <div class="main-picture">
-                <picture class="main-pic" style="visibility: hidden;"></picture>
+                <div></div> <!--Відступ для зображення-->
                 <span class="main-pic" style="position: absolute;">
-                    <img class="anime-img" width="1080" height="1080" style="width: 100%; height: 100%;" src="svg/duolingo-main.svg">
+                    <img class="box anime-img" width="1080" height="1080" src="svg/duolingo-main.svg">
                 </span>
             </div>
+            <!--Головний текст сайту та кнопки дії-->
             <div class="main-content">
                 <h1>Безкоштовний, веселий та ефективний спосіб вивчення мови!</h1>
                 <div class="register-or-login">
-                    <button class="register">
+                    <!--Головна кнопка початку(реєстрації)-->
+                    <button class="register anime-img">
                         <span>Розпочати</span>
                     </button>
-                    <button class="login" onclick="OpenLogin()">
+                    <!--Кнопка входу до вже існуючого аккаунту-->
+                    <button class="login anime-img">
                         <span>УЖЕ МАЮ ОБЛІКОВИЙ ЗАПИС</span>
                     </button>
                 </div>
             </div>
         </div>
+        <!--Зміна мови вивчення (також недостпуна, оскільки сайт скопійовано тільки україномовний)-->
         <div class="header-lang">
-            <nav>
+            <nav><!--Використовується тег nav, оскільки виступає навігацієї по мовах для вивчення-->
+                <!--Листання мов вліво (мова тільки одна, тому недоступно)-->
                 <svg class="lang-scroll" fill="none">
                     <path d="M10 2L4 8L10 14" stroke="currentColor" stroke-width="2"></path>
                 </svg>
+                <!--Список мов для вивчення-->
                 <div style="overflow: hidden;">
                     <ul class="lang-current">
                         <li>
                             <a class="lang-current-link">
-                                <img src="svg/eng_flag.svg" style="height: 28.9756px; width: 36px; margin-right: 10px; margin-left: -25px;">
+                                <img src="svg/eng_flag.svg" style="height: 29px; width: 36px; margin-right: 10px; margin-left: -25px;">
                                 <span class="lang-current-name">Англійська</span>
                             </a>
                         </li>
                     </ul>
                 </div>
+                <!--Листання мов вправо (мова тільки одна, тому недоступно)-->
                 <svg class="lang-scroll" fill="none">
                     <path d="M6 2L12 8L6 14" stroke="currentColor" stroke-width="2"></path>
                 </svg>
             </nav>
         </div>
     </header>
+    <!--Основний контент сайту-->
     <main>
         <div style="position: relative;">
+            <!--Розділ інформації про сам додаток-->
             <section class="info-section">
+                <!--Структурний блок-->
                 <section class="info-section-1">
                     <div class="info-section-text">
+                        <!--Інформація про додаток-->
                         <h2 class="info-section-title">безкоштовно. весело. ефективно.</h2>
-                        <p class="info-section-p">
+                        <p class="info-section-p"> 
                             <span>Навчатися в Duolingo цікаво й <a class="efficacy">ефективно</a>! Заробляйте бали за короткі уроки та вчіться спілкуватися іноземною мовою.</span>
                         </p>
                     </div>
+                    <!--Ілюстрація інформації про додаток-->
                     <div class="info-section-img">
                         <span>
-                            <img class="anime-img" width="1080" height="1080" style="width: 100%; height: 100%;" src="svg/duolingo-1.svg">
+                            <img class="anime-img box" width="1080" height="1080" src="svg/duolingo-1.svg">
                         </span>
                     </div>
                 </section>
+
+                <!--Для настпуних інформаційних блоків структура та сама-->
                 <section class="info-section-2">
                     <div class="info-section-text">
                         <h2 class="info-section-title">науково обґрунтований підхід</h2>
@@ -91,7 +118,7 @@
                     </div>
                     <div class="info-section-img">
                         <span>
-                            <img class="anime-img" width="1080" height="1080" style="width: 100%; height: 100%;" src="svg/duolingo-2.svg">
+                            <img class="box anime-img" width="1080" height="1080" src="svg/duolingo-2.svg">
                         </span>
                     </div>
                 </section>
@@ -102,7 +129,7 @@
                     </div>
                     <div class="info-section-img">
                         <span>
-                            <img class="anime-img" width="1080" height="1080" style="width: 100%; height: 100%;" src="svg/duolingo-3.svg">
+                            <img class="anime-img box" width="1080" height="1080" src="svg/duolingo-3.svg">
                         </span>
                     </div>
                 </section>
@@ -113,164 +140,359 @@
                     </div>
                     <div class="info-section-img">
                         <span>
-                            <img class="anime-img" width="1080" height="1080" style="width: 100%; height: 100%;" src="svg/duolingo-4.svg">
+                            <img class="anime-img box" width="1080" height="1080" src="svg/duolingo-4.svg">
                         </span>
                     </div>
                 </section>
             </section>
+            <!--Секція встановлення додатку-->
             <section class="install-app">
                 <div class="install-app-container">
+                    <!--Інформація завантаження додатку-->
                     <div class="install-app-info">
                         <h1 class="install-app-title">навчайтеся будь-де, будь-коли</h1>
                         <div class="install-btns">
-                            <a class="install-btn" href="https://apps.apple.com/ua/app/duolingo-languages-more/id570060128" target="_blank">
+                            <!--Кнопка завантаження з App Store-->
+                            <a class="install-btn anime-img" href="https://apps.apple.com/ua/app/duolingo-languages-more/id570060128">
                                 <span class="store-logo">
                                     <img src="svg/app-store.svg">
                                 </span>
-                                <span class="store-install-text">
-                                    <span><span>Завантажити з </span>App Store</span>
-                                </span>
+                                <span class="store-install-text">Завантажити з <span>App Store</span></span>
                             </a>
-                            <a class="install-btn" href="https://play.google.com/store/apps/details?hl=uk&amp;id=com.duolingo" target="_blank">
+                            <!--Кнопка завантаження з Play Market-->
+                            <a class="install-btn anime-img" href="https://play.google.com/store/apps/details?hl=uk&amp;id=com.duolingo">
                                 <span class="store-logo store-logo-google">
                                     <img src="svg/play-market.svg">
                                 </span>
-                                <span class="store-install-text">
-                                    <span><span>Установити з</span>Google Play</span>
-                                </span>
+                                <span class="store-install-text">Завантажити з <span>Google Play</span></span>
                             </a>
                         </div>
                     </div>
+                    <!--Фонове зображення для розділу встановлення додатків (складається з двох картинок)-->
                     <div class="install-app-bg">
                         <span class="install-app-bg-part">
-                            <img style="width: 100%; height: 100%;" src="svg/duolingo-5.svg">
+                            <img class="box" src="svg/duolingo-5.svg"> <!--1 частина фоновго зображення-->
                         </span>
                         <span class="install-app-bg-part">
-                            <img style="width: 100%; height: 100%;" src="svg/duolingo-6.svg">
+                            <img class="box" src="svg/duolingo-6.svg"> <!--2 частина фоновго зображення-->
                         </span>
                     </div>
                 </div>
             </section>
         </div>
+        <!--Секція для Duolingo Super-->
         <section style="background: rgb(16, 15, 62);">
             <div class="duolingo-super">
                 <div class="duolingo-super-img">
-                    <img class="anime-img" src="svg/duolingo-super.svg">
+                    <img class="anime-img" width="540" src="svg/duolingo-super.svg"> <!--Зображення Duolingo Super-->
                 </div>
                 <div class="duolingo-super-content">
-                    <img class="duolingo-super-text-img anime-img" src="svg/duolingo-super-text.svg">
-                    <button class="try-trial">
+                    <img class="duolingo-super-text-img anime-img" src="svg/duolingo-super-text.svg"> <!--Текст Duolingo Super (зображення)-->
+                    <!--Кнопка початку Duolingo Super (функціоналу нема)-->
+                    <button class="try-trial anime-img">
                         <span>Спробувати 2 тижні безкоштовно</span>
                     </button>
                 </div>
             </div>
         </section>
+        <!--Секція інофрмації про інші додатки від Duolingo (структура співпадає з розділом інформації про сам додаток)-->
+        <section class="info-section">
+            <!--Секція про Duolingo Test-->
+            <section class="info-section-1">
+                <div class="info-section-text">
+                    <h2 class="info-section-title">duolingo english test</h2>
+                    <p class="info-section-p">Наш зручний, короткий і доступний тест англійської мови поєднує в собі найновіші досягнення в галузях оцінювання знань та штучного інтелекту й дає можливість кожному пройти тест будь-де та будь-коли.</p>
+                    <a class="login anime-img" style="max-width: 330px; width: 100%" href="https://englishtest.duolingo.com/applicants">
+                        <span>Отримати сертифікат</span>
+                    </a>
+                </div>
+                <div class="info-section-img">
+                    <img class="anime-img" src="svg/duolingo-7.svg">
+                </div>
+            </section>
+            <!--Секція про Duolingo для шкіл-->
+            <section class="info-section-2">
+                <div class="info-section-text">
+                    <h2 class="info-section-title">duolingo for schools</h2>
+                    <p class="info-section-p">Шановні вчителі, ми приготували дещо й для вас! Наші безкоштовні інструменти допоможуть вашим учням вивчати мови за допомогою Duolingo в класі та за його межами. </p>
+                    <a class="login anime-img" style="max-width: 330px; width: 100%" href="https://schools.duolingo.com/">
+                        <span>Почати використання</span>
+                    </a>
+                </div>
+                <div class="info-section-img">
+                    <img class="anime-img" src="svg/duolingo-8.svg">
+                </div>
+            </section>
+            <!--Секція про Duolingo для дітей (читання)-->
+            <section class="info-section-3">
+                <div class="info-section-text">
+                    <h2 class="info-section-title">duolingo abc</h2>
+                    <p class="info-section-p">Від мови до грамотності! Веселі фонічні уроки та цікаві історії в Duolingo ABC допомагають дітям віком від 3 до 8 років навчитися читати й писати. І все це абсолютно безкоштовно.</p>
+                    <a class="login anime-img" style="max-width: 330px; width: 100%" href="https://uk.duolingo.com/abc">
+                        <span>Докладніше про Duolingo ABC</span>
+                    </a>
+                </div>
+                <div class="info-section-img">
+                    <img class="anime-img" src="svg/duolingo-9.svg">
+                </div>
+            </section>
+            <!--Секція про Duolingo Математику-->
+            <section class="info-section-4">
+                <div class="info-section-text">
+                    <h2 class="info-section-title">duolingo math</h2>
+                    <p class="info-section-p">Наші безкоштовні короткі уроки — але тепер із математики. Діти зможуть використати здобуті знання на уроках математики, а дорослі — покращити мисленнєві навички, помізкувавши над завданнями.</p>
+                    <a class="login anime-img" style="max-width: 330px; width: 100%" href="https://blog.duolingo.com/duolingo-launches-math-app">
+                        <span>Покращити свою математику</span>
+                    </a>
+                </div>
+                <div class="info-section-img">
+                    <img class="anime-img" src="svg/duolingo-10.svg">
+                </div>
+            </section>
+        </section>
+        <!--Додаткова секція для початку роботи з Duolingo-->
         <section style="align-items: end; display: flex;">
             <div class="final-start">
                 <div class="final-start-content">
-                    <h1 class="final-start-content-title">вивчайте мову з duolingo</h1>
-                    <a class="register last-register">
+                    <h1 class="final-start-content-title">вивчайте мову з duolingo</h1><!--Додатковий заголовок Duolingo-->
+                    <!--Додаткова кнопка початку(реєстрації)-->
+                    <button class="register last-register anime-img">
                         <span>Розпочати</span>
-                    </a>
+                    </button>
                 </div>
+                <!--Зображення додаткової секції-->
                 <div class="final-start-image">
                     <span>
-                        <img width="1920" height="1060" style="width: 100%; height: 100%;" src="svg/duolingo-7.svg">
+                        <img width="1920" height="1060" class="box" src="svg/duolingo-11.svg">
                     </span>
-                    <div class="final-start-green-rect"></div>
                 </div>
             </div>
         </section>
     </main>
-    <dialog class="login-dialog" style="visibility: hidden;">
+    <!--Навігація в нижній частині сайту-->
+    <footer>
+        <!--Навігація на інші сторінки цією мовою-->
+        <div class="footer-column-set">
+            <div class="footer-column">
+                <div>
+                    <h1>Про нас</h1>
+                    <ul>
+                        <li><a href="https://uk.duolingo.com/courses">Курси</a></li>
+                        <li><a href="https://uk.duolingo.com/info">Місія</a></li>
+                        <li><a href="https://uk.duolingo.com/approach">Підхід</a></li>
+                        <li><a href="https://uk.duolingo.com/efficacy">Ефективність</a></li>
+                        <li><a href="https://careers.duolingo.com/about">Команда</a></li>
+                        <li><a href="https://research.duolingo.com/">Дослідження</a></li>
+                        <li><a href="https://careers.duolingo.com/">Вакансії</a></li>
+                        <li><a href="https://design.duolingo.com/">Правила бренду</a></li>
+                        <li><a href="https://store.duolingo.com/">Магазин</a></li>
+                        <li><a href="https://press.duolingo.com/">Преса</a></li>
+                        <li><a href="https://investors.duolingo.com/">Інвестори</a></li>
+                        <li><a href="https://uk.duolingo.com/contact">Зв'язатися з нами</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div>
+                    <h1>Продукти</h1>
+                    <ul>
+                        <li><a href="https://uk.duolingo.com">Duolingo</a></li>
+                        <li><a href="https://schools.duolingo.com/">Duolingo for Schools</a></li>
+                        <li><a href="https://englishtest.duolingo.com/uk">Duolingo English Test</a></li>
+                        <li><a href="https://podcast.duolingo.com/">Подкаст</a></li>
+                        <li><a href="https://uk.duolingo.com/business">Duolingo for Business</a></li>
+                        <li><a href="https://uk.duolingo.com/super">Super Duolingo</a></li>
+                        <li><a href="https://uk.duolingo.com/gift">Подаруйте Super Duolingo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div>
+                    <h1>Застосунки</h1>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?hl=uk&amp;id=com.duolingo">Duolingo для Android</a></li>
+                        <li><a href="https://apps.apple.com/ua/app/duolingo-languages-more/id570060128">Duolingo для iOS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div>
+                    <h1>Довідка та підтримка</h1>
+                    <ul>
+                        <li><a href="https://uk.duolingo.com/help">Duolingo: довідка</a></li>
+                        <li><a href="https://duolingoschools.zendesk.com/hc/en-us">Schools: довідка</a></li>
+                        <li><a href="https://englishtest.duolingo.com/faq">Duolingo English Test: довідка</a></li>
+                        <li><a href="https://status.duolingo.com/">Статус</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div>
+                    <h1>Умови та конфіденційність</h1>
+                    <ul>
+                        <li><a href="https://uk.duolingo.com/guidelines">Правила спільноти</a></li>
+                        <li><a href="https://uk.duolingo.com/terms">Умови</a></li>
+                        <li><a href="https://uk.duolingo.com/privacy">Конфіденційність</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h1>Соцмережі</h1>
+                    <ul>
+                        <li><a href="https://blog.duolingo.com/">Блог</a></li>
+                        <li><a href="https://www.instagram.com/duolingo">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/duolingo">Facebook</a></li>
+                        <li><a href="https://twitter.com/duolingo">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/user/duolingo">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr/> <!--Роздільна лінія-->
+        <!--Навігація на переключення мови-->
+        <div class="footer-languages">
+            <h1>Мова сайту:</h1>
+            <ul>
+                <li><a href="https://ar.duolingo.com/">العربية</a></li>
+                <li><a href="https://bn.duolingo.com/">বাংলা</a></li>
+                <li><a href="https://cs.duolingo.com/">Čeština</a></li>
+                <li><a href="https://de.duolingo.com/">Deutsch</a></li>
+                <li><a href="https://en.duolingo.com/">English</a></li>
+                <li><a href="https://es.duolingo.com/">Español</a></li>
+                <li><a href="https://fr.duolingo.com/">Français</a></li>
+                <li><a href="https://hi.duolingo.com/">हिंदी</a></li>
+                <li><a href="https://hu.duolingo.com/">Magyar</a></li>
+                <li><a href="https://id.duolingo.com/">Bahasa Indonesia</a></li>
+                <li><a href="https://it.duolingo.com/">Italiano</a></li>
+                <li><a href="https://ko.duolingo.com/">한국어</a></li>
+                <li><a href="https://dn.duolingo.com/">Nederlands</a></li>
+                <li><a href="https://pl.duolingo.com/">Polski</a></li>
+                <li><a href="https://pt.duolingo.com/">Português</a></li>
+                <li><a href="https://ro.duolingo.com/">Română</a></li>
+                <li><a href="https://te.duolingo.com/">తెలుగు</a></li>
+                <li><a href="https://th.duolingo.com/">ภาษาไทย</a></li>
+                <li><a href="https://tl.duolingo.com/">Tagalog</a></li>
+                <li><a href="https://tr.duolingo.com/">Türkçe</a></li>
+                <li><a href="https://uk.duolingo.com/">Українською</a></li>
+                <li><a href="https://zs.duolingo.com/">中文</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!--Вікно входу до аккаунту -->
+    <div class="login-dialog" style="visibility: hidden;">
+        <!--Кнопка закриття вікна-->
         <div class="login-dialog-close">
             <img src="svg/dialog-close.svg">
         </div>
+        <!--Кнопка реєстрація з сторінки входу до акканту-->
         <div class="register-from-login">
             <button class="login">
                 <span>Зареєструватися</span>
             </button>
         </div>
+        <!--Форма входу до аккаунту-->
         <div class="login-form">
             <div>
                 <h1>Вхід</h1>
+                <!--Набір полів форми входу-->
                 <div class="login-field-set">
+                    <!--Поле ім'я користувача-->
                     <div class="login-field-box">
                         <div class="login-field">
-                            <input autocomplete="off" placeholder="Ел. адреса або ім’я користувача" type="text" value="">
+                            <input autocomplete="off" placeholder="Ел. адреса або ім’я користувача" type="text">
                         </div>
                     </div>
+                    <!--Поле паролю користувача-->
                     <div class="login-field-box">
                         <div class="login-field">
-                            <input autocomplete="off" placeholder="Пароль" type="password" value="">
-                            <a class="forgot-password">Забули?</a>
+                            <input autocomplete="off" placeholder="Пароль" type="password">
+                            <a class="forgot-password">Забули?</a> <!--Кнопка "Забув пароль" (без функціоналу)-->
                         </div>
                     </div>
                 </div>
+                <!--Кнопка відправлення форми (немає функціоналу)-->
                 <button class="send-login" type="submit">
                     <span style="color: #ffffff">УВІЙТИ</span>
                 </button>
+                <!-- Роздільник між способами входу -->
                 <div class="login-or">
-                    <div class="login-or-line"></div>
+                    <div class="login-or-line"></div> <!--Лінія розділення-->
                     <div class="login-or-word">або</div>
-                    <div class="login-or-line"></div>
+                    <div class="login-or-line"></div> <!--Лінія розділення-->
                 </div>
+                <!--Набір інших способів входу-->
                 <p class="oauth-set">
+                    <!--Кнопка входу через FaceBook (без функціоналу)-->
                     <button class="login" style="color: rgb(59, 89, 152);">
                         <img src="svg/facebook.svg">
                         <span style="padding-left: 10px;">Facebook</span>
                     </button>
+                    <!--Кнопка входу через Google (без функціоналу)-->
                     <button class="login" style="color: rgb(66, 133, 244);">
                         <img src="svg/google.svg">
                         <span style="padding-left: 10px;">Google</span>
                     </button>
                 </p>
             </div>
+            <!--Набір регламентів(політик) Duolingo та Google ReCaptcha-->
             <div class="policies">
+                <!--Регламент(політика) Duolingo-->
                 <div class="policy" style="margin-bottom: 20px;">
                     <span>Увійшовши в Duolingo, ви приймаєте наші <a href="https://www.duolingo.com/terms?wantsPlainInfo=1" target="_blank"><b>умови</b></a> та <a href="https://www.duolingo.com/privacy?wantsPlainInfo=1" target="_blank"><b>Політику конфіденційності</b></a>.</span>
                 </div>
+                <!--Регламент(політика) Google ReCaptcha-->
                 <div class="policy">
                     <span>Цей сайт захищено сервісом reCAPTCHA Enterprise, застосовуються <a href="https://policies.google.com/privacy" target="_blank">Політика конфіденційності</a> та <a href="https://policies.google.com/terms" target="_blank">Умови використання</a> Google.</span>
                 </div>
             </div>
         </div>
-    </dialog>
-    <dialog class="language-choose-dialog" style="visibility: hidden;">
+    </div>
+    <!--Вікно початку реєстрації, де вибирається мова -->
+    <div class="language-choose-dialog" style="visibility: hidden;">
         <div class="language-choose-wrap-1">
             <div class="language-choose-wrap-2">
                 <h1>Яку мову ви хочете вчити?</h1>
+                <!--Набір мов для вибору (доступна тільки англійська)-->
                 <ul class="language-for-choose-set">
-                    <button class="language-for-choose">
-                        <div class="language-img">
-                            <img style="height: 70.83px; width: 88px;" src="svg/eng_flag.svg">
-                        </div>
-                        <h2 class="language-title">Англійська</h2>
-                        <div class="language-students">1,70 млн учнів</div>
-                    </button>
+                    <li>
+                        <!--Кнопка вибору мови-->
+                        <button class="language-for-choose">
+                            <!--Зображення мови-->
+                            <div class="language-img">
+                                <img style="height: 71px; width: 88px;" src="svg/eng_flag.svg">
+                            </div>
+                            <h2 class="language-title">Англійська</h2> <!--Мова-->
+                            <div class="language-students">1,70 млн учнів</div> <!--Кількість учнів, що вивчають-->
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
-    </dialog>
+    </div>
+    <!--Вікно діалогу з Duo-->
+    <!--У цьому діалозі говорить тільки Duo-->
+    <!-- А користувач натискає кнопку далі-->
     <div class="duolingo-dialog" style="visibility: hidden;">
+        <!--Частина для Duo та його діалогу-->
         <div class="duolingo-dialogue-wrap">
             <div class="duolingo-dialogue">
                 <div class="duolingo-message-wrap">
                     <div class="duolingo-message">
-                        <img class="duolingo-message-corner" src="svg/message-box-corner.svg">
+                        <img class="duolingo-message-corner" src="svg/message-box-corner.svg"> <!--Зображення Duo-->
                         <div style="position: relative;">
-                            <div>Привіт! Мене звати Duo!</div>
+                            <div>Привіт! Мене звати Duo!</div> <!--Повідомлення від Duo-->
                         </div>
                     </div>
                 </div>
                 <span class="duolingo-dialogue-img">
-                    <img width="916" height="939" style="width: 100%; height: 100%;" src="svg/duolingo-hi.svg">
+                    <img width="916" height="939" class="box" src="svg/duolingo-hi.svg">
                 </span>
             </div>
         </div>
+        <!--Частина для дій користувача (тільки кнопка продовжити)-->
         <div class="duolingo-dialogue-act">
             <div class="duolingo-dialogue-footer">
                 <div class="duolingo-dialogue-act-wrap">
+                    <!--Кнопка продовжити/перейти до наступного етапу-->
                     <button class="register btn-next" id="dialogue-next">
                         <span>Продовжити</span>
                     </button>
@@ -278,93 +500,101 @@
             </div>
         </div>
     </div>
+    <!--Вікно опитування від Duo-->
+    <!--Користувач повинен вибрати 1 з 6 варіантів, щоб пройти далі-->
     <div class="duolingo-survey" style="visibility: hidden;">
         <div class="duolingo-survey-wrap">
-            <div class="duolingo-writing">
-                <span>
-                    <img style="width: 100%; height: 100%;" src="svg/duolingo-writing.svg">
-                </span>
-            </div>
+            <!--Duolingo, який "записує" відповіді користувачів-->
+            <span>
+                <img style="height: 105px;" src="svg/duolingo-writing.svg">
+            </span>
         </div>
         <div class="duolingo-survey-wrap-question">
             <div class="duolingo-survey-topbar">
                 <div class="duolingo-survey-message">
                     <div class="duolingo-survey-message-margin"></div>
+                    <!--Запитання від Duolingo для опитування-->
                     <div class="duolingo-survey-message-box">
                         <img class="duolingo-survey-message-corner" src="svg/message-box-corner.svg">
-                        <div>
-                            <div>
-                                Звідки ви дізналися про Duolingo?
-                            </div>
-                        </div>
+                        <div><div>Звідки ви дізналися про Duolingo?</div></div>
                     </div>
                 </div>
             </div>
+            <!--Варіанти відповідей на опитування-->
             <div class="duolingo-survey-answers-wrap hide-scrollbar">
-                <div style="flex-grow: 1"></div>
+                <div style="flex-grow: 1"></div> <!--Відступ зверху для варіантів відповідей-->
                 <div class="duolingo-survey-answers">
                     <ul class="answers-2-columns">
-                        <div class="duolingo-survey-answer-btn">
+                        <!--Варіант відповід на опитування-->
+                        <li class="duolingo-survey-answer-btn">
                             <div class="duolingo-survey-answer">
-                                <img style="margin-right: 16px;" src="svg/tiktok.svg">
-                                <span style="font-size: 17px; font-weight: 700;">З TikTok</span>
+                                <img style="margin-right: 16px;" src="svg/tiktok.svg"> <!--Зображення варіанту-->
+                                <span style="font-size: 17px; font-weight: 700;">З TikTok</span> <!--Текст варіанту-->
                             </div>
-                        </div>
-                        <div class="duolingo-survey-answer-btn">
+                        </li>
+                        <li class="duolingo-survey-answer-btn">
                             <div class="duolingo-survey-answer">
                                 <img style="margin-right: 16px;" src="svg/youtube.svg">
                                 <span style="font-size: 17px; font-weight: 700;">З YouTube</span>
                             </div>
-                        </div>
-                        <div class="duolingo-survey-answer-btn">
+                        </li>
+                        <li class="duolingo-survey-answer-btn">
                             <div class="duolingo-survey-answer">
                                 <img style="margin-right: 16px;" height="40px" src="svg/logika.svg">
                                 <span style="font-size: 17px; font-weight: 700;">З Хакатону Logika</span>
                             </div>
-                        </div>
-                        <div class="duolingo-survey-answer-btn">
+                        </li>
+                        <li class="duolingo-survey-answer-btn">
                             <div class="duolingo-survey-answer">
                                 <img style="margin-right: 16px;" height="40px" src="svg/google.svg">
                                 <span style="font-size: 17px; font-weight: 700;">Із пошуку в Google</span>
                             </div>
-                        </div>
-                        <div class="duolingo-survey-answer-btn">
+                        </li>
+                        <li class="duolingo-survey-answer-btn">
                             <div class="duolingo-survey-answer">
                                 <img style="margin-right: 16px;" src="svg/facebook-instagram.svg">
                                 <span style="font-size: 17px; font-weight: 700;">Із Facebook/Instagram</span>
                             </div>
-                        </div>
-                        <div class="duolingo-survey-answer-btn">
+                        </li>
+                        <li class="duolingo-survey-answer-btn">
                             <div class="duolingo-survey-answer">
                                 <img style="margin-right: 16px;" src="svg/else.svg">
                                 <span style="font-size: 17px; font-weight: 700;">Інше</span>
                             </div>
-                        </div>
+                        </li>
                     </ul>
                 </div>
-                <div style="flex-grow: 2"></div>
+                <div style="flex-grow: 2"></div> <!--Відступ знизу для варіантів відповідей-->
             </div>
+            <!--Частина для дій користувача (тільки кнопка продовжити)-->
             <div class="duolingo-dialogue-footer">
                 <div class="duolingo-dialogue-act-wrap">
-                    <button class="register btn-next btn-disabled" id="survey-next" disabled>
+                    <button class="register btn-next btn-disabled" id="survey-next" disabled> <!--КНопка продовжити-->
                         <span>Продовжити</span>
                     </button>
                 </div>
             </div>
         </div>
     </div>
+    <!--Міні-гра з Duo, яка відкривається після "реєстрації" та опитувнна-->
     <div class="mini-game" style="visibility: hidden;">
         <div class="mini-game-content">
-            <img height="150px" style="margin-bottom: 50px; cursor: pointer" src="svg/duolingo-sad.svg">
+            <img height="150px" style="margin-bottom: 50px; cursor: pointer" src="svg/duolingo-waving.svg"> <!--Іконка Duo-->
+            <!--Заголовки гри-->
             <h2 class="info-section-title" style="font-size: 28px;">Duo загубив своїх друзів!</h2>
             <h2 class="info-section-title" style="font-size: 28px;">Допоможи йому знайти їх</h2>
         </div>
+        <!-- Сама гра-->
         <div class="mini-game-wrapper">
+            <!--Картки для гри на пам'ять-->
+            <!--Картка тільки одна, але вона буде доблюватися у коді за допомогою js-->
             <ul class="cards">
                 <li class="card">
+                    <!--Передній вид картки (зображено знак питання)-->
                     <div class="view front-view">
                         <img src="mini-game/question_icon.svg">
                     </div>
+                    <!-- Задній вид картки (зображено друга Duo)-->
                     <div class="view back-view">
                         <img src="">
                     </div>
