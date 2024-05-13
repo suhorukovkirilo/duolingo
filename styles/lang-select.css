@@ -1,3 +1,5 @@
+/* Файл з стилів для початку реєстрації/вибору мови */
+
 .language-choose-dialog {
     align-items: center;
     display: flex;
@@ -9,7 +11,8 @@
     transform: translateX(-50%);
     border: none;
 }
-@media (max-width:1065px) {
+
+@media (max-width:1080px) {
     .language-choose-dialog {
         overflow: hidden;
         padding: 40px 10px !important;
@@ -25,11 +28,12 @@
     text-align: center;
 }
 
-@media (max-width:1065px) {
+@media (max-width:1080px) {
     .language-choose-wrap-1 {
-    flex-direction: column;
-    padding: 24px 12px;
-    width: 100%}
+        flex-direction: column;
+        padding: 24px 12px;
+        width: 100%
+    }
 }
 
 .language-choose-wrap-2 {
@@ -38,14 +42,17 @@
     padding: 0 40px;
     width: 100vw;
 }
-@media (max-width:1065px) {
+
+@media (max-width:1080px) {
     .language-choose-wrap-2 {
-    padding: 0 24px;
-    width: 100%}
-}@media (max-width:530px) {
+        padding: 0 24px;
+        width: 100%
+    }
+}@media (max-width:760px) {
     .language-choose-wrap-2 {
-    padding: 0;
-    width: 100%}
+        padding: 0;
+        width: 100%
+    }
 }
 
 .language-for-choose-set {
