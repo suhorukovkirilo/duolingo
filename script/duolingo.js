@@ -123,7 +123,7 @@ document.getElementsByClassName('duolingo-logo')[0].parentElement.addEventListen
 
 // Додавання перехвату стандартної переадресації посилань і додавання своєї переадресації
 for (var link of document.querySelectorAll('a')) {
-    if (link.querySelector(".duolingo-logo") === null && link.classList.contains("register")) {
+    if (link.querySelector(".duolingo-logo") === null) {
         link.addEventListener('click', function(event) {
             event.preventDefault();
             Redirect(event.target.closest("a").href);
